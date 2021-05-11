@@ -7,19 +7,20 @@ Versions: 02.001.00, 2013.1.6.8 (discontinued).
 Bussiness area: Health, Medicine.
 
 Describe the bug/issue:
-Information disclosure in Logon Page in MV's mConnect application v02.001.00 allows an attacker to know valid users from the application's database via brute force.
+Information disclosure in Logon Page of MV mConnect application v02.001.00 and 2013.1.6.8 allows an attacker to know valid users from the application's database via brute force.
 
 Have you searched the internet or Github for an answer?
 Yes.
 
 To Reproduce:
-Create a list of usernames, which can be acquired over the internet and launch brute force attacks against the application, entering any password. Note that, for valid
+Create a list of usernames, which can be acquired over the internet and launch brute force attacks against this application, entering any password. Note that, for valid
 users, the application returns "invalid password". For invalid users, the application returns "invalid user".
 
-The differentiation between the responses of the application allows us to know valid users of the system.
+The differentiation between the responses of the application allows us to know valid users of the system and proced to the next level, a password brute force attack of
+only valid users.
 
 Expected behavior:
-Application returns a neutral response, not informing whether the user exists or not.
+Application should return a neutral response, not informing whether the user exists or not of whether the password is invalid or not.
 
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
