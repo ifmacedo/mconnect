@@ -26,8 +26,7 @@ error (ORA-01756), meaning that it is vulnerable t0 SQL Injection.
 Now injecting the payload 'OR '1'='1'-- and no password, the application returns "Invalid Password", that means that it accepted this payload as a valid user. But, if
 we send a invalid user, like "rick", it returns "Invalid User".
 
-After some tests on several environments, we noticed that the password "123" is accepted in all executed tests with SQLi payload 'OR '1'='1'--, giving us access to
-the program's management interface.
+SQLMap could be used to automate injection. All database's information will be disclosed.
 
 Expected behavior:
 User input escaped in SQL query.
