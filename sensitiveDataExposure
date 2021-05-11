@@ -1,0 +1,28 @@
+Presentation:
+Security vulnerability: Sensitive Data Exposure.
+Vulnerability Type: Insecure Permissions.
+Affected Component: Affected source code pages.
+Software: MV's IDCE.
+Version: 1.0 (discontinued).
+Bussiness area: Health, Medicine.
+
+Describe the bug/issue:
+Information disclosure in aspx pages in MV's IDCE application v1.0 allows an attacker to copy and paste aspx pages in the end of the URL application that connect directly
+to the database, revealing internal and sensitive information of users and patients without been logged into the web application.
+
+Have you searched the internet or Github for an answer?
+Yes.
+
+To Reproduce:
+Without been logged into the IDCE application, open the URL and access:
+http://your_domain/idce/Medicos.aspx or;
+http://your_domain/idce/SegUsuario.aspx
+
+Internal information will be disclosed by the IDCE application, like names, usernames, birth date, brazilian regional Council of medicine (CRM), brazilian registration
+of individuals (CPF), etc.
+
+Expected behavior:
+Internal information should not be disclosed without authentication.
+
+Additional context:
+The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
