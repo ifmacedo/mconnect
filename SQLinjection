@@ -1,5 +1,7 @@
 Presentation:
 Security vulnerability: SQL Injection.
+Vulnerability Type: SQL Injection.
+Affected Component: Affected function on database access code.
 Software: mConnect MV.
 Versions: 02.001.00, 2013.1.6.8 (discontinued).
 Bussiness area: Health, Medicine.
