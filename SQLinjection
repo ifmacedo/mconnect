@@ -5,27 +5,27 @@ Version: 02.001.00 (discontinued).
 Bussiness area: Health, Medicine.
 
 Describe the bug/issue:
-SQL injection in Logon Page in MV's mConnect application, v02.001.00, allows an attacker to use a non existing user with a generic password to connect to the application and
-get access to unauthorized information.
+SQL injection in Logon Page in MV's mConnect application, v02.001.00, allows an attacker to use a non existing user with a generic password to connect to the application
+and get access to unauthorized information.
 
 Have you searched the internet or Github for an answer?
 Yes.
 
 To Reproduce:
-The application used to demonstrate the security flaw by SQL Injection is mConnect version 02.001.00. This version was discontinued by the developer and is no longer offered
-to its customers, newer versions and free flaws have been available for update and use.
+The application used to demonstrate the security flaw by SQL Injection is mConnect version 02.001.00. This version was discontinued by the developer and is no longer
+offered to its customers, newer versions and free flaws have been available for update and use.
 
-The database used by the application is an Oracle. The application does not handle the 'user' field, returning an Oracle error when an unexpected character is inserted, as a
-single quotes.
+The database used by the application is an Oracle. The application does not handle the 'user' field, returning an Oracle error when an unexpected character is inserted,
+as a single quotes.
 
-A basic test of an SQL Injection: We insert a 'single quotation mark' in one of the fields and analyze the return of the application. The application returns an Oracle error
-(ORA-01756), meaning that it is vulnerable t0 SQL Injection.
+A basic test of an SQL Injection: We insert a 'single quotation mark' in one of the fields and analyze the return of the application. The application returns an Oracle
+error (ORA-01756), meaning that it is vulnerable t0 SQL Injection.
 
-Now injecting the payload 'OR '1'='1'-- and no password, the application returns "Invalid Password", that means that it accepted this payload as a valid user. But, if we send
-a invalid user, like "rick", it returns "Invalid User".
+Now injecting the payload 'OR '1'='1'-- and no password, the application returns "Invalid Password", that means that it accepted this payload as a valid user. But, if
+we send a invalid user, like "rick", it returns "Invalid User".
 
-After some tests on several environments, we noticed that the password "123" is accepted in all executed tests with SQLi payload 'OR '1'='1'--, giving us access to the
-program's management interface.
+After some tests on several environments, we noticed that the password "123" is accepted in all executed tests with SQLi payload 'OR '1'='1'--, giving us access to
+the program's management interface.
 
 Expected behavior:
 User input escaped in SQL query.
