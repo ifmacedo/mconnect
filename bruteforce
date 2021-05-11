@@ -20,3 +20,4 @@ Expected behavior:
 Application returns a neutral response, not informing whether the user exists or not.
 
 Additional context:
+The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
