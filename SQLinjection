@@ -26,7 +26,7 @@ error (ORA-01756), meaning that it is vulnerable t0 SQL Injection.
 Now injecting the payload 'OR '1'='1'-- and no password, the application returns "Invalid Password", that means that it accepted this payload as a valid user. But, if
 we send a invalid user, like "rick", it returns "Invalid User".
 
-SQLMap could be used to automate injection. All database's information will be disclosed.
+SQLMap could be used to automate injection, pointing to User field. All database's information will be disclosed.
 
 Expected behavior:
 User input escaped in SQL query.
