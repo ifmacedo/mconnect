@@ -1,6 +1,6 @@
 Presentation:
 Security vulnerability: Sensitive Data Exposure.
-Vulnerability Type: Insecure Permissions.
+Vulnerability Type: Sensitive Data Exposure by Broken Access Control.
 Affected Component: Affected source code pages.
 Software: MV's IDCE.
 Version: 1.0 (discontinued).
