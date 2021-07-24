@@ -22,7 +22,7 @@ Internal information will be disclosed by the IDCE application, like names, user
 of individuals (CPF), etc.
 
 Expected behavior:
-Internal information should not be disclosed without authentication.
+Internal information should not be disclosed without previous authentication.
 
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
