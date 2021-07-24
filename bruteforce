@@ -1,6 +1,6 @@
 Presentation:
 Security vulnerability: Brute Force Attack.
-Vulnerability Type: Broken Autjentication.
+Vulnerability Type: Broken Authentication.
 Affected Component: Affected function on user's logon.
 Software: mConnect MV.
 Versions: 02.001.00, 2013.1.6.8 (discontinued).
