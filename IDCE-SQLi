@@ -1,0 +1,40 @@
+Presentation:
+Security vulnerability: SQL Injection.
+Vulnerability Type: Injections.
+Affected Component: Affected function on database access code.
+Software: IDCE MV.
+Version: 1.0 (discontinued).
+Bussiness area: Health, Medicine.
+
+Describe the bug/issue:
+SQL injection in Logon Page of IDCE MV's application, version 1.0, allows an attacker to inject SQL payloads on the user field, connecting to an Oracle database
+to access private and sensitive information.
+
+Have you searched the internet or Github for an answer?
+Yes.
+
+To Reproduce:
+The SQL Injection running over a Time-Based Blind technique.
+The database usually is an Oracle, but it could be changed.
+
+1. Open the IDCE's login page. Fill in the user and password fields and intercept it with Burp Suite.
+2. Copy the request lines in the Burp Suite and paste the lines into a new file. Rename this file to "idce-sqli.txt", e.g.
+3. Now, into the "idce-sqli.txt" file, edit the last line. Find the "txtUsuario=" and change it to "txtUsuario=*". You have to put an asterisk as user field value.
+4. Save the file "idce-sqli.txt".
+5. Execute SQLMap with the following command: sqlmap -r idce-sqli.txt --dbms=oracle --level=5 --risk=3 --technique=T
+6. Wait for the end of SQLi execution.
+
+DBMS usually is an Oracle, but you could have to find out the DBMS whether it is another one. For this, you could execute the following command:
+sqlmap -r idce-sqli.txt --dbs --level=5 --risk=3 --technique=T
+
+If you do not have success with the Time-Based techniques, try with all other possible techquines with the following command:
+sqlmap -r idce-sqli.txt --dbs --level=5 --risk=3
+
+All database's information will be disclosed. But if you have used Time-Based Blind technique, it could take a long time to discover all database's information.
+So, be pacient.
+
+Expected behavior:
+Parameterized SQL queries.
+
+Additional context:
+The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
