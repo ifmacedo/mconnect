@@ -14,14 +14,14 @@ Have you searched the internet or Github for an answer?
 Yes.
 
 To Reproduce:
-Create a list of usernames, which can be acquired over the internet and launch brute force attack against this application, entering any password. Note that, for valid
+Enumeration - Create a list of usernames, which can be acquired over the internet and launch a word list attack against the vulnerable application, entering any invalid password. Note that for valid
 users, the application returns "invalid password". For invalid users, the application returns "invalid user".
 
-The differentiation between the responses of the application allows a hacker to know valid users of the system and proced to the next level, a password brute force attack of
+The differences between the responses of the application allows a hacker to know valid users of the system and proced to the next level, a password brute force attack over
 only valid users.
 
 Expected behavior:
-Application should return a neutral response, not informing whether a user exists or not and whether the password is invalid or not.
+Application should return a neutral response, not informing if a user exists or not, nor if the password is invalid or not.
 
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
