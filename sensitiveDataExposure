@@ -7,7 +7,7 @@ Version: 1.0 (discontinued).
 Bussiness area: Health, Medicine.
 
 Describe the bug/issue:
-Information disclosure in aspx pages in MV's IDCE application v1.0 allows an attacker to copy and paste aspx pages in the end of the URL application that connect directly
+Information disclosure in aspx pages of MV's IDCE application v1.0 allows an attacker to copy and paste aspx pages in the end of the URL application that connect directly
 to the database, revealing internal and sensitive information of users and patients without been logged into the web application.
 
 Have you searched the internet or Github for an answer?
@@ -22,7 +22,7 @@ Internal information will be disclosed by the IDCE application, like names, user
 of individuals (CPF), etc.
 
 Expected behavior:
-Internal information should not be disclosed without previous authentication.
+Internal information should not be disclosed without proper authentication and authorization.
 
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
