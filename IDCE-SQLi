@@ -27,11 +27,11 @@ The database usually is an Oracle, but it could be changed.
 DBMS of this application usually is an Oracle, but you could have to find out the DBMS whether it was changed. For this, you could execute the following command:
 sqlmap -r idce-sqli.txt --dbs --level=5 --risk=3 --technique=T
 
-If you do not have success with the Time-Based techniques, try all other possible techquines with the following command:
+If you do not have success with the Time-Based techniques, try out all other possible techquines with the following command:
 sqlmap -r idce-sqli.txt --dbs --level=5 --risk=3
 
 All database's information will be disclosed. But if you have used Time-Based Blind technique, it could take a long time to discover all database's information.
-So, be pacient.
+So, be patient.
 
 Expected behavior:
 Parameterized SQL queries.
