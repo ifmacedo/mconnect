@@ -1,0 +1,67 @@
+Presentation:
+Security vulnerability: Plaintext Storage of Passwords.
+Vulnerability Type: Insecure Storage of sensitive data.
+Affected Component: Affected function on database storage.
+Software: IDCE MV.
+Version: 1.0 (discontinued).
+Bussiness area: Health, Medicine.
+
+Describe the bug/issue:
+The IDCE healthcare system stores all passwords in plain text (clear text, not encrypted) in the database. This application has a SQL Injection security breach
+that allows hackers enter the database and read all human readable passwords effortlessly.
+
+Other literary references about this flaw:
+- CWE-256: Plaintext Storage of a Password;
+- CWE-312: Cleartext Storage of Sensitive Information;
+- CWE-521: Weak Password Requirements.
+
+Have you searched the internet or Github for an answer?
+Yes.
+
+To Reproduce:
+1. Once you are inside database, look for the password records. All of them will be stored in plain text. Per example:
+
+Database: IDCE
+Table: RS_SEG_USUARIO
+[25 entries]
++------------+-------------+
+| ID_USUARIO | CD_SENHA    |
++------------+-------------+
+| 43         | 000         |
+| 61         | BCJK7660    |
+| 105        | 377276      |
+| 109        | 3:155?      |
+| 112        | 0031        |
+| 343        | 00000       |
+| 345        | UCWEG638?   |
+| 346        | 8;;<4369    |
+| 347        | @SNCDJH?8   |
+| 354        | 423=4       |
+| 355        | 212<        |
+| 360        | BCPWLGG90<= |
+| 361        | 31EFL^_P    |
+| 362        | BPJH@UWABO  |
+| 381        | CCAEIS689:  |
+| 386        | @NE62>3=    |
+| 3870       | M;A7Q3      |
+| 391        | SK@EWBH9;9  |
+| 397        | ECUM7660    |
+| 401        | VEGG4?4<    |
+| 402        | 9616=25:    |
+| 404        | 316=2       |
+| 508        | 5725        |
+| 512        | MWSMQG      |
+| 519        | 0230<7      |
++------------+-------------+
+
+2. As seen above, IDCE application also accepts very weak passwords, like "000" or any other combination of few numbers. That is a weak password policy breach.
+
+3. Using a chain attack, combining the SQL Injection breach with an insecure storage of sensitive data (passwords), a hacker could have a complete 
+account takeover of this application.
+
+Expected behavior:
+- Secure storage of sensitive data with encrypted passwords.
+- A strong password policy.
+
+Additional context:
+The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
