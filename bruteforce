@@ -25,3 +25,5 @@ Application should return a neutral response, not informing if a user exists or 
 
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
+
+CVE ID: CVE-2020-23283
