@@ -26,3 +26,5 @@ Internal information should not be disclosed without proper authentication and a
 
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
+
+CVE ID: CVE-2020-23284
