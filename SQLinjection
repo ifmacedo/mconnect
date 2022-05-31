@@ -14,19 +14,19 @@ Have you searched the internet or Github for an answer?
 Yes.
 
 To Reproduce:
-The application used to demonstrate the security flaw by SQL Injection is mConnect version 02.001.00. This version was discontinued by the developer and is no longer
+1. The application used to demonstrate the security flaw by SQL Injection is mConnect version 02.001.00. This version was discontinued by the developer and is no longer
 offered to the customers, newer and free-flaw versions have been available for update and use.
 
-The database used by the application is an Oracle. The application does not handle the 'user' field, returning an Oracle error when an unexpected character is inserted,
+2. The database used by the application is an Oracle. The application does not handle the 'user' field, returning an Oracle error when an unexpected character is inserted,
 as a single quotes.
 
-A basic test of an SQL Injection: We insert a 'single quotation mark' in one of the fields and analyze the return of the application. The application returns an Oracle
+3. A basic test of an SQL Injection: We insert a 'single quotation mark' in one of the fields and analyze the return of the application. The application returns an Oracle
 error (ORA-01756), meaning that it is vulnerable t0 SQL Injection.
 
-Now injecting the payload 'OR '1'='1'-- and no password, the application returns "Invalid Password", meaning that it accepted this payload as a valid user. But, if
+4. Now injecting the payload 'OR '1'='1'-- and no password, the application returns "Invalid Password", meaning that it accepted this payload as a valid user. But, if
 we send a invalid user, it returns "Invalid User".
 
-SQLMap could be used to automate injection, pointing to User field. All database's information will be disclosed.
+5. SQLMap could be used to automate injection, pointing to User field. All database's information will be disclosed.
 
 Expected behavior:
 Parameterized SQL queries.
@@ -38,3 +38,5 @@ https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sh
 which recommends parametrization and white lists, among other solutions.
 
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
+
+CVE ID: CVE-2020-23282
