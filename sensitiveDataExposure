@@ -24,7 +24,7 @@ of individuals (CPF), etc.
 Expected behavior:
 Internal information should not be disclosed without proper authentication and authorization.
 
-Additional context:
-The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
+Bug Fix:
+No bug fix. Discontinued software.
 
 CVE ID: CVE-2020-23284
