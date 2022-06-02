@@ -36,6 +36,9 @@ So, be patient.
 Expected behavior:
 Parameterized SQL queries.
 
+Bug Fix:
+Update to the latest version.
+
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
 
