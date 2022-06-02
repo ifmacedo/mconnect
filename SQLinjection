@@ -36,6 +36,4 @@ http://cwe.mitre.org/data/definitions/89.html
 https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 which recommends parametrization and white lists, among other solutions.
 
-The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
-
 CVE ID: CVE-2020-23282
