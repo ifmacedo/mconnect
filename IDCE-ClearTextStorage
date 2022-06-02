@@ -63,5 +63,8 @@ Expected behavior:
 - Secure storage of sensitive data with encrypted passwords.
 - A strong password policy.
 
+Bug Fix:
+Update to the latest version.
+
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
