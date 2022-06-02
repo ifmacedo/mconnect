@@ -23,6 +23,9 @@ only valid users.
 Expected behavior:
 Application should return a neutral response, not informing if a user exists or not, nor if the password is invalid or not.
 
+Bug Fix:
+No bug fix. Discontinued software.
+
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
 
