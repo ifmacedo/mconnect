@@ -27,6 +27,9 @@ we send a invalid user, it returns "Invalid User".
 Expected behavior:
 Parameterized SQL queries.
 
+Bug Fix:
+No bug fix. Discontinued software.
+
 Additional context:
 Using a blacklist filter is not recommended in this scenario, because SQL/MySQL queries can be written in varied and unexpected ways, see e.g.:
 http://cwe.mitre.org/data/definitions/89.html
