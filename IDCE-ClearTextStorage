@@ -68,3 +68,5 @@ Update to the latest version.
 
 Additional context:
 The procedure is to request a new CVE identifier when an vulnerability was previously considered fixed.
+
+Reported in CVE-2022-31405 (Mitre.org).
